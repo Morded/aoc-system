@@ -26,7 +26,7 @@ const HorizontalSection = () => {
         pin: true,
         scrub: 1,
         snap: 1 / (components.length - 1),
-        end: () => "+=" +container?.offsetWidth
+        end: () => `+=${container?.offsetWidth ?? 0}`
       }
     })
   }, [])
