@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  @apply bg-aocLight;
+  background-image: url("/noise.png");
+}
+
+

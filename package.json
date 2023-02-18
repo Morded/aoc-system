@@ -9,9 +9,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@next/font": "^13.1.6",
+    "@types/gsap": "^3.0.0",
+    "embla-carousel-autoplay": "^7.0.9",
+    "embla-carousel-class-names": "^7.0.9",
+    "embla-carousel-react": "^7.0.9",
+    "gsap": "^3.11.4",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
     "zod": "^3.20.2"
   },
   "devDependencies": {
