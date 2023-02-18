@@ -13,11 +13,11 @@ module.exports = {
       },
       fontSize: {
         "5xl": "4.375rem"
-      }
-    },
-    fontFamily: {
-      sans: ['var(--font-roboto)', 'sans-serif'],
-      serif: ['var(--font-rokkitt)', 'serif'],
+      },
+      fontFamily: {
+        sans: ['var(--font-roboto)', 'sans-serif'],
+        serif: ['var(--font-rokkitt)', 'serif'],
+      },
     },
   },
   plugins: [],
