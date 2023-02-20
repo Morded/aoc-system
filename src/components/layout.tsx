@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 type LayoutProps = {
@@ -21,6 +22,7 @@ const Layout = ({ children, title }: LayoutProps) => {
       <div className="w-full min-h-screen flex flex-col mx-auto items-center justify-center overflow-x-hidden">
         {children}
       </div>
+      <Footer />
     </>
   )
 }

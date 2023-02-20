@@ -9,7 +9,8 @@ module.exports = {
         "aocPurple": "#c06be3",
         "aocSky": "#7ed5f3",
         "aocLight": "#F4F4F1",
-        "aocDark": "#171717"
+        "aocDark": "#171717",
+        "aocGray": "#8A8A8A"
       },
       fontSize: {
         "5xl": "4.375rem"
