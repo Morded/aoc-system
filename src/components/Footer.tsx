@@ -7,7 +7,6 @@ import PaymentMethods from "./PaymentMethods";
 import SocialMedia from "./SocialMedia";
 
 const Footer = () => {
-  console.log(mainMenu)
   return (
     <footer className="px-4 xl:px-0 pt-6 pb-2 flex flex-col items-center">
       <div className="max-w-7xl w-full">
