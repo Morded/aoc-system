@@ -12,7 +12,7 @@ const ScrollToTop = () => {
 
     if (scrollY > window.innerHeight / 3) {
       setOpacity(1)
-      setRight(width < 765 ? '-4rem' : '-3rem')
+      setRight(width < 765 ? '-0.5rem' : '-3rem')
     } else {
       setOpacity(0)
       setRight('-5rem')
@@ -29,7 +29,7 @@ const ScrollToTop = () => {
   return (
     <div 
       className={`
-        font-serif flex gap-2 uppercase text-xs md:text-sm fixed top-1/2 -rotate-90 tracking-[0.3em] 
+        font-serif flex gap-2 uppercase text-xs md:text-sm fixed top-3/4 md:top-1/2 -rotate-90 tracking-[0.3em] 
         group -right-5 bg-aocLight py-1 px-4 rounded-full z-40 transition-all duration-500
         cursor-pointer hover:shadow-[rgba(14,30,37,0.12)_0px_2px_4px_0px,_rgba(14,30,37,0.32)_0px_2px_16px_0px]
       `}
@@ -40,13 +40,13 @@ const ScrollToTop = () => {
       }}
       onClick={handleClick}
     >
-      tetejére
+      <span className="hidden md:block">tetejére</span>
       <Image 
         alt="arrow" 
         src="/arrow.svg" 
         width={27} 
         height={10} 
-        className="group-hover:translate-x-2 transition-all"
+        className="group-hover:translate-x-2 transition-all py-1"
       />
     </div>
   )

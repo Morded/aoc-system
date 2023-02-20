@@ -18,7 +18,7 @@ const TrustedBy = () => {
             className={`
               flex items-center justify-center relative w-auto h-12  
               saturate-0 hover:saturate-100 transition-all ease-in-out duration-100
-              md:18 lg:h-24
+              md:18 lg:h-24 hover:scale-95
             `} >
             <Image 
               alt={logo.from} 
