@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import HackAnimation from "../utils/HackAnimation";
 import Button from "./Button";
 import Header1 from "./Header1";
@@ -8,11 +8,16 @@ import SerifBody from "./SerifBody";
 const Hero = () => {
   const gridItem = useRef<HTMLDivElement>(null)
   const sikeres = HackAnimation({defaultText: 'sikeres'})
+  const [width, setWidth] = useState(615)
+
+  useEffect(() => {
+    document.addEventListener('resize', () => setWidth(gridItem.current?.clientWidth ?? 615))
+  }, [gridItem])
 
   return (
-    <section className="mt-24 flex flex-col items-center justify-center gap-12 px-4 w-full min-h-screen max-w-6xl">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8 items-center">
-          <div className="text-lg flex flex-col gap-6 col-span-1">
+    <section className="mt-10 md:mt-0 flex flex-col items-center justify-start md:justify-center gap-12 px-4 w-full min-h-screen max-w-7xl">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 items-center">
+          <div className="text-lg flex flex-col gap-6 col-span-1 order-1 md:order-0">
             <Header1>
               A <UnderlinedText value={sikeres} /> vállalkozások platformja
             </Header1>
@@ -36,9 +41,9 @@ const Hero = () => {
             </div>
           </div>
 
-          <div ref={gridItem} className="col-span-1 relative h-screen flex items-center justify-center">
-            <Image alt="girl with puzzle gif" src="/puzzle.gif" width={gridItem.current?.clientWidth ?? 615} height={gridItem.current?.clientHeight ?? 500} />
-            <div className="h-[110vh] top-0 absolute w-56 bg-aocOrange opacity-20 z-[-1]"></div>
+          <div ref={gridItem} className="col-span-1 relative h-auto md:h-screen flex items-center justify-center order-0 md:order-1">
+            <Image alt="girl with puzzle gif" src="/puzzle.gif" width={width} height={gridItem.current?.clientHeight ?? 500} />
+            <div className="h-[110vh] top-0 absolute w-56 bg-aocOrange opacity-20 z-[-1] invisible md:visible"></div>
           </div>
         </div>
     </section>

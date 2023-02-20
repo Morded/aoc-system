@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="max-w-6xl absolute w-full p-8 flex justify-between items-center z-50 mx-auto">
+      <div className="max-w-7xl absolute w-full p-8 flex justify-between items-center z-50 mx-auto">
         <Link href="/">
           <Image 
             alt="AOC system logo, Homepage link" 

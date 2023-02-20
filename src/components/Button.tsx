@@ -13,7 +13,7 @@ const Button = ({ href, text, bgColor, textColor, wFull }: ButtonProps) => {
     <Link 
       href={href} 
       className={`
-        bg-aocDark text-base tracking-widest px-8 
+        bg-aocDark text-base tracking-wide px-8 
         capitalize font-bold font-sans flex items-center h-10
         hover:opacity-60 md:transition-all
         md:w-fit md:rounded-full md:py-2 md:justify-center
