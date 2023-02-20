@@ -16,7 +16,7 @@ const BusinessToBalance = () => {
         </SerifBody>
       </div>
       <div className="col-span-1">
-        <p className="text-[2rem] md:text-[3.25rem] font-bold md:font-medium tracking-wide leading-tight">
+        <p className="text-[2rem] md:text-[3.25rem] font-bold md:font-medium tracking-wide leading-tight text-aocDark">
           A Business to Balance felfogás túlmutat a vállalkozások mindennapi igényeinek kielégítésén.<br/>
           Segíti a vállalkozások zökkenőmentes fejlődését, a szervezet stabil struktúrájának kialakítását. 
         </p>

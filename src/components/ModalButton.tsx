@@ -15,7 +15,7 @@ const ModalButton = ({ type, onClick }: ModalButtonProps) => {
         height={42}
         className={`
           transition-all cursor-pointer float-right
-          ${type === "exit" ? "m-8 p-2" : "p-2"}
+          ${type === "exit" ? "mx-4 my-8 p-2" : "p-2"}
         `}
         onClick={onClick}
       />

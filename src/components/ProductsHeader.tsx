@@ -7,7 +7,7 @@ const COLORS = ['text-aocOrange', 'text-aocSky', 'text-aocPurple']
 
 const ProductsHeader = () => {
   return (
-    <section className="md:w-full max-w-6xl flex flex-col justify-center items-center my-48 md:my-96 px-4 xl:px-0 text-center">
+    <section className="md:w-full max-w-6xl flex flex-col justify-center items-center h-screen md:my-96 px-4 xl:px-0 text-center">
       <SubHeader>Tekintsd meg termékeinket</SubHeader>
       <Header1>Üzleti szoftvereinkkel</Header1>
       <Header1>

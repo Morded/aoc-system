@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="max-w-7xl absolute w-full py-8 flex justify-between items-center z-50 mx-auto">
+      <div className="max-w-7xl absolute w-full py-8 flex justify-between items-center z-50 px-4 lg:px-0">
         <AOCLogo />
 
         <ModalButton type="hamburger" onClick={() => setIsOpen(!isOpen)}/>
@@ -32,8 +32,17 @@ const Navbar = () => {
               {mainMenu
                 .filter(item => item.place === undefined || item.place === "nav")
                 .map((item, i) => 
-                  <li key={i} className="w-full py-6 md:w-auto md:py-0">
-                    <Link href={item.href ?? "#"} className="w-full p-6 md:w-auto md:p-0">{item.name}</Link>
+                  <li key={i} className="w-full md:w-auto md:py-0">
+                    <Link 
+                      href={item.href ?? "#"} 
+                      className={`
+                        flex w-full p-6 px-8 text-3xl font-bold text-aocDark
+                        md:font-normal md:w-auto md:p-0 md:text-base
+                        hover:opacity-60
+                    `}>
+                      {item.name}
+                      {item.items && "+"}
+                    </Link>
                   </li>
                 )
               }
