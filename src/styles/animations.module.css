@@ -4,6 +4,11 @@
   animation-fill-mode: forwards;
 }
 
+.slideInRight {
+  animation: slideInRight .5s;
+  animation-fill-mode: forwards;
+}
+
 .blur {
   /* display: inline-block; */
   animation: blur 2s;
@@ -17,12 +22,12 @@
 }
 
 .fadeIn {
-  animation: fade 2s;
+  animation: fadeIn 1s;
   animation-fill-mode: forwards;
 }
 
 .fadeOut {
-  animation: fade 2s;
+  animation: fadeOut 1s;
   animation-fill-mode: forwards;
 }
 
@@ -42,6 +47,29 @@
   100% {
     opacity: 0;
     transform: translateY(75%);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  25% {
+    opacity: .4;
+    transform: translateX(75%);
+  }
+  50% {
+    opacity: .6;
+    transform: translateX(50%);
+  }
+  75% {
+    opacity: .8;
+    transform: translateX(25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
 

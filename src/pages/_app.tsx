@@ -1,6 +1,6 @@
 import { type AppType } from "next/dist/shared/lib/utils";
 import "../styles/globals.css";
-import { Roboto, Rokkitt } from '@next/font/google'
+import { Raleway, Roboto } from '@next/font/google'
 import ScrollObserver from "../utils/ScrollObserver";
 
 const roboto = Roboto({ 
@@ -9,16 +9,16 @@ const roboto = Roboto({
   subsets: ['latin-ext']
 })
 
-const rokkitt = Rokkitt({ 
+const raleway = Raleway({ 
   weight: '400', 
-  variable: '--font-rokkitt',
+  variable: '--font-raleway',
   subsets: ['latin-ext']
 })
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return ( 
     <ScrollObserver>
-      <main className={`${roboto.variable} ${rokkitt.variable} font-sans min-h-screen`}>
+      <main className={`${roboto.variable} ${raleway.variable} font-sans min-h-screen`}>
         <Component {...pageProps} />
       </main>
     </ScrollObserver>

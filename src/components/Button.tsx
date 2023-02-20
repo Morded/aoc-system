@@ -5,18 +5,21 @@ type ButtonProps = {
   text: string;
   bgColor?: string;
   textColor?: string;
+  wFull?: boolean;
 }
 
-const Button = ({ href, text, bgColor, textColor }: ButtonProps) => {
+const Button = ({ href, text, bgColor, textColor, wFull }: ButtonProps) => {
   return (
     <Link 
       href={href} 
       className={`
-        bg-aocDark text-base tracking-widest rounded-full w-fit py-2 px-8 
-        uppercase font-bold font-sans flex justify-center items-center h-10
-        hover:opacity-60 transition-all
+        bg-aocDark text-base tracking-widest px-8 
+        capitalize font-bold font-sans flex items-center h-10
+        hover:opacity-60 md:transition-all
+        md:w-fit md:rounded-full md:py-2 md:justify-center
         ${bgColor ? bgColor : 'bg-aocDark'}
         ${textColor ? textColor : 'text-aocLight'}
+        ${wFull ? 'w-full rounded-none py-6 justify-start' : ''}
       `}
     >
       {text}

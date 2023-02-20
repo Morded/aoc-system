@@ -16,7 +16,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-roboto)', 'sans-serif'],
-        serif: ['var(--font-rokkitt)', 'serif'],
+        serif: ['var(--font-raleway)', 'sans-serif'],
       },
     },
   },

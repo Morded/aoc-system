@@ -10,7 +10,7 @@ const Hero = () => {
   const sikeres = HackAnimation({defaultText: 'sikeres'})
 
   return (
-    <section className="flex flex-col items-center justify-center gap-12 px-4 w-full min-h-screen max-w-6xl">
+    <section className="mt-24 flex flex-col items-center justify-center gap-12 px-4 w-full min-h-screen max-w-6xl">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8 items-center">
           <div className="text-lg flex flex-col gap-6 col-span-1">
             <Header1>
@@ -21,15 +21,15 @@ const Hero = () => {
             </SerifBody>
 
             <div className="flex gap-4 mt-4">
+              {/* <Button  */}
+              {/*   href="#"  */}
+              {/*   text="sales activity"  */}
+              {/*   bgColor="bg-aocSky"  */}
+              {/*   textColor="text-aocDark" */}
+              {/* /> */}
               <Button 
                 href="#" 
-                text="sales activity" 
-                bgColor="bg-aocSky" 
-                textColor="text-aocDark"
-              />
-              <Button 
-                href="#" 
-                text="business & office" 
+                text="próbaverzió kipróbálása" 
                 bgColor="bg-aocOrange" 
                 textColor="text-aocDark"
               />
