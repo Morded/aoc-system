@@ -19,7 +19,10 @@ const Button = ({ href, text, bgColor, textColor, wFull }: ButtonProps) => {
         md:w-fit md:rounded-full md:py-2 md:justify-center
         ${bgColor ? bgColor : 'bg-aocDark'}
         ${textColor ? textColor : 'text-aocLight'}
-        ${wFull ? 'w-full rounded-none py-6 justify-start' : ''}
+        ${wFull 
+          ? 'w-full rounded-none py-6 justify-start' 
+          : 'w-fit rounded-full py-2 justify-center'
+        }
       `}
     >
       {text}
