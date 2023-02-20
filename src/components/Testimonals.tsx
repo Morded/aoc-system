@@ -5,7 +5,7 @@ import testimonialList from "../../public/testimonials";
 
 const Testimonials = () => {
   return (
-    <Carousel className="bg-aocOrange text-aocDark py-10 lg:py-20 bg-[url(/noise.png)]">
+    <Carousel className="text-aocDark py-10 lg:py-20">
       {testimonialList.map((testimonial, index) => {
         const { by, from, link, text } = testimonial;
         return (

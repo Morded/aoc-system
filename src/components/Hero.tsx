@@ -37,7 +37,7 @@ const Hero = () => {
               {/* /> */}
               <Button 
                 href="#" 
-                text="próbaverzió kipróbálása" 
+                text="Próbaverzió kipróbálása" 
                 bgColor="bg-aocOrange" 
                 textColor="text-aocDark"
               />

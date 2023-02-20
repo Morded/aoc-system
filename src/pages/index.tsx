@@ -8,6 +8,7 @@ import ProductsHeader from "../components/ProductsHeader";
 import ScrollToTop from "../components/ScrollToTop";
 import Testimonials from "../components/Testimonals";
 import TrustedBy from "../components/TrustedBy";
+import TryDemoCTA from "../components/TryDemoCTA";
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <ProductsHeader />
       <Products />
       <Testimonials />
+      <TryDemoCTA />
     </Layout>
   )
 };
