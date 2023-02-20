@@ -4,7 +4,7 @@ import SerifBody from "./SerifBody";
 
 const BusinessToBalance = () => {
   return (
-    <section className="mint-h-screen w-full max-w-7xl grid grid-cols-2 py-10 gap-4">
+    <section className="mint-h-screen w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 py-10 gap-4 px-4">
       <div className="col-span-1 flex flex-col gap-6">
         <Header1>
           Business to Balance
@@ -16,7 +16,7 @@ const BusinessToBalance = () => {
         </SerifBody>
       </div>
       <div className="col-span-1">
-        <p className="text-[3.25rem] font-medium tracking-wider leading-none">
+        <p className="text-[2rem] md:text-[3.25rem] font-bold md:font-medium tracking-wide leading-tight">
           A Business to Balance felfogás túlmutat a vállalkozások mindennapi igényeinek kielégítésén.<br/>
           Segíti a vállalkozások zökkenőmentes fejlődését, a szervezet stabil struktúrájának kialakítását. 
         </p>
