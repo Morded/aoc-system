@@ -4,7 +4,7 @@ import SerifBody from "./SerifBody";
 
 const BusinessToBalance = () => {
   return (
-    <section className="mint-h-screen w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 py-10 gap-4 px-4 md:px-0">
+    <section className="mint-h-screen w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 py-10 gap-4 px-4 xl:px-0">
       <div className="col-span-1 flex flex-col gap-6">
         <Header1>
           Business to Balance

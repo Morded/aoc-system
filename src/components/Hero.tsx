@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <section className={`
       my-10 flex flex-col items-center justify-start gap-12 px-4 w-full max-w-7xl
-      md:my-0 md:justify-center md:min-h-screen md:px-0
+      md:my-0 md:justify-center md:min-h-screen xl:px-0
     `}>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 items-center">
           <div className="text-lg flex flex-col gap-6 col-span-1 order-1 md:order-0">
@@ -63,7 +63,7 @@ function UnderlinedText({ value }: UnderlinedTextProps) {
   return (
     <div className="relative w-fit inline-block">
       {value}
-      <div className="absolute bg-aocOrange w-full h-7 z-[-1] bottom-2"></div>
+      <div className="absolute bg-aocOrange w-full h-3 md:h-5 lg:h-7 z-[-1] bottom-2"></div>
     </div>
   )
 }

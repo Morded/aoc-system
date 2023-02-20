@@ -7,6 +7,7 @@ import Products from "../components/Products";
 import ProductsHeader from "../components/ProductsHeader";
 import ScrollToTop from "../components/ScrollToTop";
 import Testimonials from "../components/Testimonals";
+import TrustedBy from "../components/TrustedBy";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       <ScrollToTop />
       <Hero />
       <BusinessToBalance />
+      <TrustedBy />
       <HorizontalSection />
       <ProductsHeader />
       <Products />

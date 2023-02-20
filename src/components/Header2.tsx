@@ -4,7 +4,7 @@ type Header2Props = {
 
 const Header2 = ({ children }: Header2Props) => {
   return (
-    <h1 className="font-[900] text-[3rem] leading-none tracking-[0.02em]">
+    <h1 className="font-[900] text-xl md:text-2xl lg:text-[3rem] leading-none tracking-[0.02em]">
       {children}
     </h1>
   )
