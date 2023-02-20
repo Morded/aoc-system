@@ -8,12 +8,14 @@ const ScrollToTop = () => {
   const [right, setRight] = useState('-3rem')
 
   useEffect(() => {
+    const width = window.innerWidth;
+
     if (scrollY > window.innerHeight / 3) {
       setOpacity(1)
-      setRight('-2rem')
+      setRight(width < 765 ? '-4rem' : '-3rem')
     } else {
       setOpacity(0)
-      setRight('-3rem')
+      setRight('-5rem')
     }
   }, [scrollY])
 
