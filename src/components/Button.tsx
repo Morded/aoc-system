@@ -14,7 +14,7 @@ const Button = ({ href, text, bgColor, textColor, wFull, big }: ButtonProps) => 
     <Link 
       href={href} 
       className={`
-        bg-aocDark tracking-wide px-8 
+        bg-aocDark tracking-wide px-8 bg-[url(/noise.png)]
         font-bold font-sans flex items-center h-10
         hover:opacity-60 md:transition-all
         md:w-fit md:rounded-full md:py-2 md:justify-center

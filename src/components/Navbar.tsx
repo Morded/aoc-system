@@ -15,9 +15,10 @@ const Navbar = () => {
 
         <ModalButton type="hamburger" onClick={() => setIsOpen(!isOpen)}/>
         <div className={`
-          flex flex-col items-center fixed top-0 left-0 bg-white w-full gap-0 pb-10 min-h-screen z-[9999]
-          transition-all ease-in-out
+          flex flex-col items-center fixed top-0 left-0 w-full gap-0 pb-10 min-h-screen z-[9999]
+          transition-all ease-in-out bg-aocOrange bg-[url(/noise.png)]
           md:flex-row md:relative md:visible md:bg-transparent md:w-auto md:gap-12 md:pb-0 md:min-h-0 
+          md:bg-none
           ${isOpen 
             ? 'visible'
             : 'invisible'
@@ -27,7 +28,7 @@ const Navbar = () => {
           <nav className="w-full md:w-auto">
             <ul className={`
               flex flex-col items-center w-full
-              md:flex-row md:gap-10 md:w-auto
+              md:flex-row md:gap-10 md:w-auto 
             `}>
               {mainMenu
                 .filter(item => item.place === undefined || item.place === "nav")
