@@ -7,13 +7,12 @@ type DemoPickerProps = {
 }
 
 const DemoPicker = ({ isOpen }: DemoPickerProps) => {
-  if (mainMenu === undefined) return null
+  const items = mainMenu.find(item => item.name === 'Termékek')?.items
+  if (!items) return null
 
   return (
     <ModalNav isOpen={isOpen} notNav={true}>
-      {mainMenu
-        .find(item => item.name === 'Termékek')
-        .items
+      {items
         .map((subitem, index) => 
           <Link 
             href={subitem.href ? `${subitem.href ?? ""}/trial` : '#'} 
