@@ -7,14 +7,16 @@ type DemoPickerProps = {
 }
 
 const DemoPicker = ({ isOpen }: DemoPickerProps) => {
+  if (mainMenu === undefined) return null
+
   return (
     <ModalNav isOpen={isOpen} notNav={true}>
-      {mainMenu?
+      {mainMenu
         .find(item => item.name === 'Termékek')
         .items
         .map((subitem, index) => 
           <Link 
-            href={subitem.href +'/trial' ?? '#'} 
+            href={subitem.href ? `${subitem.href ?? ""}/trial` : '#'} 
             key={index} 
             className={`py-3 text-center hover:opacity-60 transition-opacity
               ${isOpen ? "visible" : "invisible"}
