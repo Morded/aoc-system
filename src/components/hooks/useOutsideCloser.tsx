@@ -1,7 +1,7 @@
-import { RefObject, useEffect } from "react";
+import { useEffect } from "react";
 
 type OutsideCloserProps = {
-  ref: RefObject<HTMLDivElement>,
+  ref: any;
   setIsOpen: (isOpen: boolean) => void;
 }
 
