@@ -1,14 +1,15 @@
-import { useEffect } from "react";
+import { RefObject, useEffect } from "react";
 
 type OutsideCloserProps = {
-  ref: any;
+  ref: RefObject<HTMLDivElement>;
   setIsOpen: (isOpen: boolean) => void;
 }
 
 const useOutsideCloser = ({ ref, setIsOpen }: OutsideCloserProps) => {
   useEffect(() => {
     function handleClickOutside(event: any) {
-      if (ref.current && !ref.current.contains(event.target)) {
+      if (!ref) return 
+      if (ref.current && event.target && !ref.current.contains(event.target)) {
         setIsOpen(false);
       }
     }
