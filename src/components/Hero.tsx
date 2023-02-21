@@ -3,15 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import DemoPicker from "./DemoPicker";
 import Header1 from "./Header1";
-import useOutsideCloser from "./hooks/useOutsideCloser";
 import SerifBody from "./SerifBody";
 
 const Hero = () => {
   const gridItem = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState(615)
   const [isOpen, setIsOpen] = useState(false);
-  const refContainer = useRef<HTMLDivElement>(null)
-  useOutsideCloser({ref: refContainer, setIsOpen: setIsOpen})
 
   useEffect(() => {
     document.addEventListener('resize', () => setWidth(gridItem.current?.clientWidth ?? 615))
@@ -32,9 +29,10 @@ const Hero = () => {
             </SerifBody>
 
             <div 
-              ref={refContainer}
               className="mt-4 w-fit relative" 
               onClick={() => setIsOpen(!isOpen)}
+              onMouseEnter={() => setIsOpen(!isOpen)}
+              onMouseLeave={() => setIsOpen(!isOpen)}
             >
               <Button 
                 text="Próbaverzió kipróbálása" 
