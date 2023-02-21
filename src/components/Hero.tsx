@@ -1,12 +1,17 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
+import DemoPicker from "./DemoPicker";
 import Header1 from "./Header1";
+import useOutsideCloser from "./hooks/useOutsideCloser";
 import SerifBody from "./SerifBody";
 
 const Hero = () => {
   const gridItem = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState(615)
+  const [isOpen, setIsOpen] = useState(false);
+  const refContainer = useRef<HTMLDivElement>(null)
+  useOutsideCloser({ref: refContainer, setIsOpen: setIsOpen})
 
   useEffect(() => {
     document.addEventListener('resize', () => setWidth(gridItem.current?.clientWidth ?? 615))
@@ -26,19 +31,17 @@ const Hero = () => {
               Egyszerű üzleti szoftverek, amelyek megkönnyítik a mindennapokat.
             </SerifBody>
 
-            <div className="flex gap-4 mt-4">
-              {/* <Button  */}
-              {/*   href="#"  */}
-              {/*   text="sales activity"  */}
-              {/*   bgColor="bg-aocSky"  */}
-              {/*   textColor="text-aocDark" */}
-              {/* /> */}
+            <div 
+              ref={refContainer}
+              className="mt-4 w-fit relative" 
+              onClick={() => setIsOpen(!isOpen)}
+            >
               <Button 
-                href="#" 
                 text="Próbaverzió kipróbálása" 
                 bgColor="bg-aocOrange" 
                 textColor="text-aocDark"
               />
+              <DemoPicker isOpen={isOpen} />
             </div>
           </div>
 
