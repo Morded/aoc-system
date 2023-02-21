@@ -33,7 +33,7 @@ const HackAnimation = ({ defaultText }: HackAnimationProps): string => {
       
       setInnerText(randomText)
       iterations += 1 / 3;
-    }, 60)
+    }, 40)
   }
 
   useEffect(() => {

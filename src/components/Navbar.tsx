@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { useState } from "react";
 import mainMenu from "../../public/mainmenu";
 import AOCLogo from "./AOCLogo";
 import Button from "./Button";
 import ModalButton from "./ModalButton";
+import NavbarItem from "./NavbarItem";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,20 +32,7 @@ const Navbar = () => {
             `}>
               {mainMenu
                 .filter(item => item.place === undefined || item.place === "nav")
-                .map((item, i) => 
-                  <li key={i} className="w-full md:w-auto md:py-0">
-                    <Link 
-                      href={item.href ?? "#"} 
-                      className={`
-                        flex w-full p-6 px-8 text-3xl font-bold text-aocDark
-                        md:font-normal md:w-auto md:p-0 md:text-base
-                        hover:opacity-60
-                    `}>
-                      {item.name}
-                      {item.items && "+"}
-                    </Link>
-                  </li>
-                )
+                .map((item, i) => <NavbarItem key={i} item={item} />)
               }
             </ul>
           </nav>
