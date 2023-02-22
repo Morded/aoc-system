@@ -4,7 +4,7 @@ type SubHeaderProps = {
 
 const SubHeader = ({ children }: SubHeaderProps) => {
   return (
-    <h1 className="font-serif text-3xl md:text-4xl tracking-[0.02rem] mb-8 md:mb-4 text-aocDark">
+    <h1 className="font-serif text-2xl md:text-4xl tracking-[0.02rem] mb-8 md:mb-4 text-aocDark">
       {children}
     </h1>
   )

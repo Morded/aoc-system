@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { useContext, useRef } from "react";
+import { useRef } from "react";
 import Button from "./Button";
-import { TileContext } from "./Tile";
 
 type ProductContainerProps = {
   children: React.ReactNode
@@ -80,7 +79,7 @@ const Product = ({progress, page, header, text, href, bgColor, textColor, image 
   return (
     <ProductContainer> 
       <ProductLeft progress={progress} page={page}> 
-        <div className="flex flex-col gap-2 md:gap-8"> 
+        <div className="flex flex-col gap-2 md:gap-8 max-w-lg mx-auto"> 
            {header} 
            <div className="text-3xl md:text-[3.25rem] leading-tight font-black tracking-[0.03em] mb-6 md:mb-0">
              {text}
@@ -94,7 +93,9 @@ const Product = ({progress, page, header, text, href, bgColor, textColor, image 
        </div>
      </ProductLeft>
      <ProductRight progress={progress} page={page}>
-         <Image alt="mobile app" src={`/${image}.svg`} fill />
+        <div className="w-full mx-auto relative h-[50vh]">
+           <Image alt="mobile app" src={`/${image}.svg`} fill className="max-w-lg" />
+        </div>
      </ProductRight>
    </ProductContainer> 
   )
