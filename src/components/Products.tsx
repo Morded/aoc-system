@@ -1,27 +1,35 @@
-import Product from "./Product";
+import Product, { ProductBackground } from "./Product";
 import { Tile, TileBackground, TileContent, TileWrapper } from "./Tile"
 
 const Products = () => {
   return (
     <TileWrapper numOfPages={2}>
-      <TileBackground></TileBackground>
+      <TileBackground>
+        <ProductBackground />
+      </TileBackground>
       <TileContent>
-        <Tile page={0} renderContent={() => 
-          <Product
-            header="Sales activity" 
-            text="Az új értékesítési platform"
-            buttonHref="#"
-            buttonBgColor="aocSky"
-            imageSrc="sales-activity.svg"
-            />
-          }/>
-        <Tile page={1} renderContent={() => 
+        <Tile page={0} renderContent={(progress) => 
           <Product 
-            header="Business & Office" 
-            text="Stabil alapokra építve fejlődsz"
-            buttonHref="#"
-            buttonBgColor="aocOrange"
-            imageSrc="business-and-office.svg"
+            progress={progress} 
+            page={0}
+            header="Sales activity"
+            text="Az új értékesítési platform."
+            href="#"
+            bgColor="bg-aocSky"
+            textColor="text-aocDark"
+            image="sales-activity"
+          />
+        }/>
+        <Tile page={1} renderContent={(progress) => 
+          <Product 
+            progress={progress} 
+            page={1}
+            header="Business & Office"
+            text="Átlátható pénzügyi és könyvelési folyamatok!"
+            href="#"
+            bgColor="bg-aocOrange"
+            textColor="text-aocDark"
+            image="business-and-office"
           />
         }/>
       </TileContent>

@@ -37,7 +37,9 @@ export const TileWrapper = ({ children, numOfPages }: WrapperProps) => {
 
   return (
     <TileContext.Provider value={{numOfPages, currentPage}}>
-      <div ref={refContainer} className="relative w-full">
+      <div ref={refContainer} className="relative text-aocLight w-full" style={{
+        height: `${numOfPages * 100}vh`
+      }}>
         {children}
       </div>
     </TileContext.Provider>
@@ -49,7 +51,7 @@ type TileBackgroundProps = {
 }
 
 export const TileBackground = ({ children }: TileBackgroundProps) => ( 
-  <div className="absolute h-full w-1/2 bg-aocDark">{children}</div>
+  <div className="absolute h-full w-full">{children}</div>
 )
 
 type TileContentProps = {
@@ -76,9 +78,9 @@ export const Tile = ({ page, renderContent }: TileProps) => {
   }
 
   return (
-    <div ref={refContainer} className="absolute top-0 w-full"
+    <div ref={refContainer} className="sticky top-0 w-full"
       style={{
-        // pointerEvents: progress >= 0 || progress  >= 1 ? 'none' : undefined,
+        pointerEvents: progress <= 0 || progress  >= 1 ? 'none' : undefined,
         opacity
       }}
     >

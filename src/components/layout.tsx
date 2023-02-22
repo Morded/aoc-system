@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import ScrollToTop from "./ScrollToTop";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -19,7 +20,8 @@ const Layout = ({ children, title }: LayoutProps) => {
         <link rel="icon" href="https://aocsystem.com/favicon_aoc_dark_white.ico" />
       </Head>
       <Navbar />
-      <div className="w-full min-h-screen flex flex-col mx-auto items-center justify-center overflow-x-hidden">
+      <div className="w-full min-h-screen flex flex-col mx-auto items-center justify-center">
+        <ScrollToTop />
         {children}
       </div>
       <Footer />

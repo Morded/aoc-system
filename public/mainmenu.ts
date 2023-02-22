@@ -28,7 +28,7 @@ const mainMenu: MenuProps[] = [
     items: [
       {
         name: "Rólunk",
-        href: "https://aocsystem.com/#/about"
+        href: "/aboutus"
       },
       {
         name: "Karrier",

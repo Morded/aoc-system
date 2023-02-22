@@ -5,20 +5,20 @@ import HorizontalSection from "../components/HorizontalSection";
 import Layout from "../components/layout";
 import Products from "../components/Products";
 import ProductsHeader from "../components/ProductsHeader";
-import ScrollToTop from "../components/ScrollToTop";
 import Testimonials from "../components/Testimonals";
 import TrustedBy from "../components/TrustedBy";
 import TryDemoCTA from "../components/TryDemoCTA";
+import Works from "../components/works";
 
 const Home: NextPage = () => {
   return (
     <Layout title="A sikeres vállalkozások platformja">
-      <ScrollToTop />
       <Hero />
       <BusinessToBalance />
       <TrustedBy />
-      <HorizontalSection />
+      {/* <HorizontalSection /> */}
       <ProductsHeader />
+      {/* <Works /> */}
       <Products />
       <Testimonials />
       <TryDemoCTA />

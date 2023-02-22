@@ -51,7 +51,7 @@ const MenuCol = ({ name, items }: MenuProps) => {
       <h1 className="font-sans text-aocGray">
       {name}
       </h1>
-      <div className="flex flex-col gap-4 lg:gap-7">
+      <div className="flex flex-col gap-4 lg:gap-5">
         {items && items.map((item, index) => (
           <Link 
             href={item.href ?? "#"} 
