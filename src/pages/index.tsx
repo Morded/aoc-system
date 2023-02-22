@@ -8,7 +8,6 @@ import ProductsHeader from "../components/ProductsHeader";
 import Testimonials from "../components/Testimonals";
 import TrustedBy from "../components/TrustedBy";
 import TryDemoCTA from "../components/TryDemoCTA";
-import Works from "../components/works";
 
 const Home: NextPage = () => {
   return (
@@ -18,7 +17,6 @@ const Home: NextPage = () => {
       <TrustedBy />
       {/* <HorizontalSection /> */}
       <ProductsHeader />
-      {/* <Works /> */}
       <Products />
       <Testimonials />
       <TryDemoCTA />
