@@ -10,7 +10,7 @@ const TrustedBy = () => {
         </Header2>
       </div>
       <ClientLogos />
-      <ClientLogos />
+      <ClientLogos reverse={true} />
     </div>
   )
 }

@@ -3,11 +3,19 @@ import Link from "next/link";
 import testimonialList from "../../public/testimonials";
 import SliderContainer, { SliderItem } from "./Slider";
 
-const ClientLogos = () => (
-  <>
+type Props = {
+  reverse?: boolean;
+}
+
+const ClientLogos = ({reverse}: Props) => {
+  const logos = [...testimonialList];
+  if (reverse === true) 
+    logos.reverse()
+
+  return (
     <SliderContainer className="" contentWidth={1290} initialOffsetX={0}>
       <div className="mt-10 flex justify-center gap-10 w-full relative overflow-hidden">
-        {[...testimonialList].map((logo, index) => 
+        {logos.map((logo, index) => 
           <SliderItem key={index} width={150}>
             <Link  
               href={logo.link}
@@ -33,7 +41,7 @@ const ClientLogos = () => (
         )}
       </div>
     </SliderContainer>
-  </>
-)
+  )
+}
 
 export default ClientLogos
