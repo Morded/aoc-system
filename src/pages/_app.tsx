@@ -2,6 +2,7 @@ import { type AppType } from "next/dist/shared/lib/utils";
 import "../styles/globals.css";
 import localFont from '@next/font/local'
 import ScrollObserver from "../utils/ScrollObserver";
+import SizeObserver from "../utils/SizeObservers";
 
 const roboto = localFont({
   src: [
@@ -41,11 +42,13 @@ const raleway = localFont({
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return ( 
-    <ScrollObserver>
-      <main className={`${roboto.variable} ${raleway.variable} font-sans min-h-screen`}>
-        <Component {...pageProps} />
-      </main>
-    </ScrollObserver>
+    <SizeObserver>
+      <ScrollObserver>
+        <main className={`${roboto.variable} ${raleway.variable} font-sans min-h-screen`}>
+          <Component {...pageProps} />
+        </main>
+      </ScrollObserver>
+    </SizeObserver>
   )
 };
 

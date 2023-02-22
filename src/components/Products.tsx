@@ -7,19 +7,20 @@ const Products = () => {
       <TileBackground>
         <ProductBackground />
       </TileBackground>
-      <TileContent>
-        <Tile page={0} renderContent={(progress) => 
-          <Product 
-            progress={progress} 
-            page={0}
-            header="Sales activity"
-            text="Az új értékesítési platform."
-            href="#"
-            bgColor="bg-aocSky"
-            textColor="text-aocDark"
-            image="sales-activity"
-          />
-        }/>
+        <TileContent>
+            <Tile page={0} renderContent={(progress) => 
+              <Product 
+                progress={progress} 
+                page={0}
+                header="Sales Activity"
+                text="Az új értékesítési platform."
+                href="https://aocsystem.com/#/products/sales-activity"
+                bgColor="bg-aocSky"
+                textColor="text-aocDark"
+                image="sales-activity"
+              />
+            }/>
+        
         <Tile page={1} renderContent={(progress) => 
           <Product 
             progress={progress} 

@@ -55,7 +55,7 @@ export const TileBackground = ({ children }: TileBackgroundProps) => (
 )
 
 type TileContentProps = {
-  children: React.ReactNode | React.ReactNode[]
+  children: React.ReactNode | React.ReactNode[] | JSX.Element
 }
 
 export const TileContent = ({ children }: TileContentProps) => (
@@ -67,7 +67,7 @@ type TileProps = {
   renderContent: (progress: number) => any
 }
 
-export const Tile = ({ page, renderContent }: TileProps) => {
+export const Tile = ({ page, renderContent }: TileProps): JSX.Element => {
   const { currentPage, numOfPages } = useContext(TileContext)
   const progress = Math.max(0, currentPage - page)
   const refContainer = useRef<HTMLDivElement>(null)
