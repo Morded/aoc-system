@@ -57,7 +57,7 @@ export const ProductRight = ({children, progress, page}: ProductProps) => {
     <div ref={refContainer} className="flex flex-1 lg:items-center justify-center h-screen" style={{
       transform: `translateY(${translateY}px)`
     }}>
-      <div className="w-full max-w-md pt-10 lg:pt-0 px-10 md:px-0">
+      <div className="w-full max-w-xl pt-10 lg:pt-0 px-10 md:px-0">
         {children}
       </div>
     </div>
@@ -93,8 +93,8 @@ const Product = ({progress, page, header, text, href, bgColor, textColor, image 
        </div>
      </ProductLeft>
      <ProductRight progress={progress} page={page}>
-        <div className="w-full mx-auto relative h-[50vh]">
-           <Image alt="mobile app" src={`/${image}.svg`} fill className="max-w-lg" />
+        <div className="w-full mx-auto relative h-[70vh]">
+           <Image alt="mobile app" src={`/${image}.svg`} fill className="max-w-xl" />
         </div>
      </ProductRight>
    </ProductContainer> 

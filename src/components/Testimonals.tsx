@@ -5,7 +5,7 @@ import testimonialList from "../../public/testimonials";
 
 const Testimonials = () => {
   return (
-    <Carousel className="text-aocDark py-10 lg:py-20">
+    <Carousel className="text-aocDark py-20 lg:py-36">
       {testimonialList.map((testimonial, index) => {
         const { by, from, link, text } = testimonial;
         return (
