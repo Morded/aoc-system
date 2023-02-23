@@ -1,5 +1,5 @@
 type Header2Props = {
-  children: React.ReactNode
+  children: React.ReactNode | JSX.Element
 }
 
 const Header2 = ({ children }: Header2Props) => {

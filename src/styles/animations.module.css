@@ -1,3 +1,8 @@
+.rotate {
+  transform-origin: left top;
+  animation: rotate 20s infinite;
+}
+
 .slideDown {
   animation: rotateX 3s;
   animation-fill-mode: forwards;
@@ -207,5 +212,17 @@
     height: 0;
     opacity: 0;
     transform: rotateX(-90deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1.1 1.2;
+  }
+  to {
+    rotate: 359deg;
   }
 }
