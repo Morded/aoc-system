@@ -12,13 +12,13 @@ import TryDemoCTA from "../components/TryDemoCTA";
 const Home: NextPage = () => {
   return (
     <Layout title="A sikeres vállalkozások platformja">
-        <Hero />
-        <BusinessToBalance />
-        <TrustedBy />
+      <Hero />
+      <BusinessToBalance />
+      <TrustedBy />
       <div className="overflow-x-hidden w-full min-h-screen flex flex-col mx-auto items-center justify-center">
         <HorizontalSection />
       </div>
-        <ProductsHeader />
+      <ProductsHeader />
       <Products />
       <Testimonials />
       <TryDemoCTA />
