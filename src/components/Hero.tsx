@@ -4,6 +4,7 @@ import Button from "./Button";
 import DemoPicker from "./DemoPicker";
 import Header1 from "./Header1";
 import SerifBody from "./SerifBody";
+import UnderlinedText from "./UnderlinedText";
 
 const Hero = () => {
   const gridItem = useRef<HTMLDivElement>(null)
@@ -22,7 +23,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 items-center">
           <div className="text-lg flex flex-col gap-6 col-span-1 order-1 md:order-0">
             <Header1>
-              A <UnderlinedText value="sikeres" /> vállalkozások platformja
+              A <UnderlinedText>sikeres</UnderlinedText> vállalkozások platformja
             </Header1>
             <SerifBody>
               Egyszerű üzleti szoftverek, amelyek megkönnyítik a mindennapokat.
@@ -53,16 +54,3 @@ const Hero = () => {
 }
 
 export default Hero;
-
-type UnderlinedTextProps = {
-  value: string;
-}
-
-function UnderlinedText({ value }: UnderlinedTextProps) {
-  return (
-    <div className="relative w-fit inline-block">
-      {value}
-      <div className="absolute bg-aocOrange w-full h-3 md:h-5 lg:h-7 z-[-1] bottom-2"></div>
-    </div>
-  )
-}

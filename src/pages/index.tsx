@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       <Hero />
       <BusinessToBalance />
       <TrustedBy />
-      {/* <HorizontalSection /> */}
+      <HorizontalSection />
       <ProductsHeader />
       <Products />
       <Testimonials />

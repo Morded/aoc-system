@@ -34,7 +34,7 @@ const Footer = () => {
             }
           </div>
           <PaymentMethods />
-          <div className="w-full lg:w-auto flex justify-center items-center">
+          <div className="w-full lg:w-auto flex justify-center items-center mt-4 md:mt-0">
             <span className="text-sm">&copy; {new Date().getFullYear()} Copyright AOC System Zrt.</span>
           </div>
         </div>

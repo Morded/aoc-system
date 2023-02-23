@@ -1,60 +1,76 @@
-import { useEffect, useRef } from "react";
-import ColoredDot from "./ColoredDot";
-import Header2 from "./Header2";
-import SubHeader from "./SubHeader";
-import { gsap } from "gsap"
-// import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import SubHeader from './SubHeader';
+import Header2 from './Header2';
 
-const HorizontalSection = () => {
-  gsap.registerPlugin(ScrollTrigger);
-  // const refContainer = useRef<HTMLDivElement>(null)
-  // const { current: elContainer } = refContainer
+gsap.registerPlugin(ScrollTrigger);
+
+function HorizontalSection() {
+  const scroller = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // const components = document.querySelectorAll('#horizontal-container')
-    const components = document.querySelectorAll('.x')
-    // const container: HTMLElement | null = document.querySelector('#horizontal-container')
+    const skillSet = gsap.utils.toArray('.skill-set');
 
-    gsap.to(components, {
-      xPercent: -100 * (components.length - 1),
-      ease: "none",
+    const to = gsap.to(skillSet, {
+      xPercent: () => -100 * (skillSet.length - 1),
+      ease: 'none',
       scrollTrigger: {
-        trigger: '#horizontal-container',
+        trigger: scroller.current,
+        markers: false,
         pin: true,
+        pinSpacing: true,
         scrub: 1,
-        snap: 1 / (components.length - 1),
-        end: () => `+=${0}`
-      }
-    })
-  }, [])
+        invalidateOnRefresh: true,
+        anticipatePin: 0,
+        snap: {
+          snapTo: 1 / (skillSet.length - 1), 
+          duration: 0.2, 
+          delay: 0, 
+          ease: "power3.inOut"
+        },
+
+        end: () => `+=${window.innerWidth}`
+      },
+    });
+
+    return () => {
+      to.kill();
+    };
+  }, []);
 
   return (
-    <div id="horizontal-container" className="min-h-screen w-[300vw] flex items-center">
-      <Tile>
-        <SubHeader>Üzleti folyamatok 1</SubHeader>
-        <Header2>
-          Ne hagyd hogy a folyamatok irányítsanak téged. Felhőalapú rendszerünkkel kézhez kapod a szükséges információt, akárhol is vagy<ColoredDot color="text-aocViolet"/>
-        </Header2>
-      </Tile>
-      <Tile>
-        <SubHeader>Üzleti folyamatok 2</SubHeader>
-        <Header2>
-          Ne hagyd hogy a folyamatok irányítsanak téged. Felhőalapú rendszerünkkel kézhez kapod a szükséges információt, akárhol is vagy<ColoredDot color="text-aocViolet"/>
-        </Header2>
-      </Tile>
-      <Tile>
-        <SubHeader>Üzleti folyamatok 3</SubHeader>
-        <Header2>
-          Ne hagyd hogy a folyamatok irányítsanak téged. Felhőalapú rendszerünkkel kézhez kapod a szükséges információt, akárhol is vagy<ColoredDot color="text-aocViolet"/>
-        </Header2>
-      </Tile>
+    <div className="overflow-hidden flex self-start">
+      <div className="overflow-hidden">
+        <div
+          id="skills"
+          ref={scroller}
+          className="flex overflow-x-hidden w-[300vw] m-0 relative h-screen"
+        >
+          <Tile>
+            <SubHeader>Üzleti folyamatok</SubHeader>
+            <Header2>
+              Ne hagyd hogy a folyamatok irányítsanak téged. Felhőalapú rendszerünkkel kézhez kapod a szükséges információt, akárhol is vagy.
+            </Header2>
+          </Tile>
+          <Tile>
+            <SubHeader>Stabil alapokra építve</SubHeader>
+            <Header2>
+              Csak alapkőre lehet biztosat építeni, közös munkával ez megingathatatlan lesz!
+            </Header2>
+          </Tile>
+          <Tile>
+            <SubHeader>Időmenedzsment</SubHeader>
+            <Header2>
+              Koncentrálj arra ami igazán fontos, mi lefutjuk helyetted a kötelező köröket. Intelligens, automatizált funkciók segítenek a munkában.
+            </Header2>
+          </Tile>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
-
-export default HorizontalSection;
 
 type TileProps = {
   children: React.ReactNode
@@ -62,10 +78,12 @@ type TileProps = {
 
 function Tile({ children }: TileProps) {
   return (
-    <div className="w-screen flex justify-center items-center flex-none x">
-      <div className="max-w-6xl text-center px-4">
+    <section className="w-screen flex justify-center items-center flex-none skill-set ns-horizontal-section__item">
+      <div className="max-w-screen-2xl text-center px-4">
         {children}
       </div>
-    </div>
+    </section>
   )
 }
+
+export default HorizontalSection;

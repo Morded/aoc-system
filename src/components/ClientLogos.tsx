@@ -18,9 +18,9 @@ const ClientLogos = ({reverse}: Props) => {
         {logos.map((logo, index) => 
           <SliderItem key={index} width={150}>
             <Link  
+              key={index} 
               href={logo.link}
               target="_blank"
-              key={index} 
               className={`
                 flex items-center justify-center relative w-auto h-12  
                 saturate-0 hover:saturate-100 transition-all ease-in-out duration-100
