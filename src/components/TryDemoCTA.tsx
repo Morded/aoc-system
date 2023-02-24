@@ -1,13 +1,9 @@
-import { useState } from "react";
 import { FadeInScaleWhenVisible, FadeInUpWhenVisible, FadeInWhenVisible } from "../utils/FramerAnimations";
-import Button from "./Button";
-import DemoPicker from "./DemoPicker";
 import Header1 from "./Header1";
+import ProductPicker from "./ProductPicker";
 import SerifBody from "./SerifBody";
 
 const TryDemoCTA = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <section className="w-full px-4 lg:px-0 py-28 bg-aocOrange bg-[url(/noise.png)] flex justify-center mb-5">
       <div className="max-w-7xl flex flex-col justify-center items-center text-center gap-8">
@@ -20,15 +16,7 @@ const TryDemoCTA = () => {
           </SerifBody>
         </FadeInWhenVisible>
         <FadeInUpWhenVisible delay={0.3}>
-          <div 
-            className="relative" 
-            onClick={() => setIsOpen(!isOpen)}
-            onMouseEnter={() => setIsOpen(!isOpen)}
-            onMouseLeave={() => setIsOpen(!isOpen)}
-          >
-            <Button text="Kipróbálom" big={true}/>
-            <DemoPicker isOpen={isOpen} />
-          </div>
+          <ProductPicker buttonText="Kipróbálom" big />
         </FadeInUpWhenVisible>
       </div>
     </section>

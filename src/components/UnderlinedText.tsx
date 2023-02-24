@@ -1,12 +1,16 @@
+import { SlideInLeft } from "../utils/FramerAnimations";
+
 type UnderlinedTextProps = {
   children: React.ReactNode;
 }
 
 function UnderlinedText({ children }: UnderlinedTextProps) {
   return (
-    <div className="relative w-fit inline-block">
+    <div className="relative w-fit inline-block overflow-x-clip">
       {children}
-      <div className={`bg-aocOrange absolute w-full  z-[-1] bottom-2 h-3 md:h-5 lg:h-7`}></div>
+      <SlideInLeft delay={0.4}>
+        <div className={`bg-aocOrange absolute w-full z-[-1] bottom-2 h-3 md:h-5 lg:h-7`}></div>
+      </SlideInLeft>
     </div>
   )
 }

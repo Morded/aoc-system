@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="max-w-6xl absolute w-full py-8 flex justify-between items-center z-50 px-4 lg:px-0">
+      <div className="max-w-6xl absolute w-full py-8 flex justify-between items-center z-50 px-4 xl:px-0">
         <AOCLogo />
 
         <ModalButton type="hamburger" onClick={() => setIsOpen(!isOpen)}/>

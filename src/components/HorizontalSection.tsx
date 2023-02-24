@@ -3,19 +3,19 @@ import SubHeader from './SubHeader';
 import Header2 from './Header2';
 import styles from '../styles/animations.module.css'
 import HorizontalTile from './HorizontalTile';
-import useAnimatedBlob from '../utils/useAnimatedBlob';
+// import useAnimatedBlob from '../utils/useAnimatedBlob';
 import useHorizontalScrolling from '../utils/useHorizontalScrolling';
 import { FadeInScaleWhenVisible, FadeInWhenVisible } from '../utils/FramerAnimations';
 
 function HorizontalSection() {
   const scroller = useRef<HTMLDivElement>(null);
   const refBlob = useRef<HTMLDivElement>(null)
-  useAnimatedBlob(refBlob)
+  // useAnimatedBlob(refBlob)
   useHorizontalScrolling(scroller)
 
   return (
     <div className="overflow-hidden flex self-start">
-      <div className="overflow-hidden">
+      <div className="overflow-clip">
         <div
           id="skills"
           ref={scroller}
@@ -24,7 +24,7 @@ function HorizontalSection() {
         <div 
           ref={refBlob}
           className={`absolute w-[300px] lg:w-[500px] aspect-square bg-aocOrange rounded-full 
-            left-[15%] top-1/2 -translate-x-1/2 -translate-y-1/2
+            left-[16%] top-1/2 -translate-x-1/2 -translate-y-1/2
             bg-gradient-to-r from-aocOrange to-aocSky blur-3xl opacity-40
             invisible md:visible
             ${styles.rotate ?? ""}

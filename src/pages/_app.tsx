@@ -4,7 +4,7 @@ import localFont from '@next/font/local'
 import ScrollObserver from "../utils/ScrollObserver";
 import SizeObserver from "../utils/SizeObservers";
 
-const roboto = localFont({
+export const roboto = localFont({
   src: [
     {
       path: '../../public/fonts/Roboto/Roboto-Regular.ttf',
@@ -26,7 +26,7 @@ const roboto = localFont({
   variable: '--font-roboto',
 })
 
-const raleway = localFont({
+export const raleway = localFont({
   src: [
     {
       path: '../../public/fonts/Raleway/static/Raleway-Regular.ttf',

@@ -7,9 +7,10 @@ type ButtonProps = {
   textColor?: string;
   wFull?: boolean;
   big?: boolean;
+  onClick?: () => void
 }
 
-const Button = ({ href, text, bgColor, textColor, wFull, big }: ButtonProps) => {
+const Button = ({ href, text, bgColor, textColor, wFull, big, onClick }: ButtonProps) => {
   const classN = `
         bg-aocDark tracking-wide px-8 bg-[url(/noise.png)]
         font-bold font-sans flex items-center h-10
@@ -35,7 +36,7 @@ const Button = ({ href, text, bgColor, textColor, wFull, big }: ButtonProps) => 
     )
 
   return (
-    <div className={`${classN} cursor-pointer`}>
+    <div className={`${classN} cursor-pointer`} onClick={onClick}>
       {text}
     </div>
   )
