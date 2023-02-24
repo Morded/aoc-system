@@ -1,4 +1,5 @@
 import styles from "../styles/animations.module.css"
+import {motion} from "framer-motion"
 
 type ModalNavProps = {
   isOpen: boolean;
@@ -8,17 +9,23 @@ type ModalNavProps = {
 
 const ModalNav = ({ isOpen, notNav, children }: ModalNavProps) => {
   return (
-    <div className={`${isOpen ? "h-auto" : "h-0"} 
-      transition-all w-full flex flex-col
+    <motion.div 
+      initial="hidden"
+      animate={isOpen ? "visible" : "hidden"}
+      transition={{ duration: 0.2, type: "spring" }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0 }
+      }}
+      className={` 
       ${notNav === true 
-      ? '-translate-x-1/2 left-1/2 rounded-md absolute w-max shadow bg-aocLight' 
-      : 'md:-translate-x-1/2 md:left-1/2 md:rounded-md md:absolute md:w-max md:shadow md:bg-aocLight'
+      ? 'rounded-md absolute w-max shadow bg-aocLight' 
+      : 'md:rounded-md md:absolute md:w-max md:shadow md:bg-aocLight'
       }
-      
-       
+      w-full flex flex-col 
     `}>
       {children}
-    </div>
+    </motion.div>
   )
 }
 

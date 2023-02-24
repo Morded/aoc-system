@@ -79,18 +79,20 @@ const Product = ({progress, page, header, text, href, bgColor, textColor, image 
   return (
     <ProductContainer> 
       <ProductLeft progress={progress} page={page}> 
-        <div className="flex flex-col gap-2 md:gap-8 max-w-lg mx-auto"> 
-           {header} 
-           <div className="text-3xl md:text-[3.25rem] leading-tight font-black tracking-[0.03em] mb-6 md:mb-0">
-             {text}
-           </div>
-         <Button 
-           href={href} 
-           text="Részletek" 
-           bgColor={bgColor} 
-           textColor={textColor}
-          />
-       </div>
+        <div className="flex flex-col gap-2 md:gap-3 max-w-lg mx-auto"> 
+          <span className="text-aocGray">
+            {header} 
+          </span>
+          <div className="text-3xl md:text-5xl font-bold tracking-[0.03em] mb-6 md:mb-10">
+            {text}
+          </div>
+          <Button 
+            href={href} 
+            text="Részletek" 
+            bgColor={bgColor} 
+            textColor={textColor}
+           />
+        </div>
      </ProductLeft>
      <ProductRight progress={progress} page={page}>
         <div className="w-full mx-auto relative h-[70vh]">

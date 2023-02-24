@@ -1,6 +1,7 @@
 import Link from "next/link";
 import mainMenu from "../../public/mainmenu";
 import ModalNav from "./ModalNav";
+import {motion} from "framer-motion"
 
 type DemoPickerProps = {
   isOpen: boolean;
@@ -24,7 +25,17 @@ const DemoPicker = ({ isOpen }: DemoPickerProps) => {
               hover:opacity-60 items-center
             `}
           >
-            {subitem.name}
+            <motion.div
+              initial="hidden"
+              animate={isOpen ? "visible" : "hidden"}
+              transition={{ duration: 0.1, delay: 0.1 + index * 0.1 }}
+              variants={{
+                visible: { opacity: 1 },
+                hidden: { opacity: 0 }
+              }}
+            >
+              {subitem.name}
+            </motion.div>
           </Link>
       )}
     </ModalNav>

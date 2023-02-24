@@ -4,9 +4,9 @@ type SerifBodyProps = {
 
 const SerifBody = ({ children }: SerifBodyProps) => {
   return (
-    <h1 className="font-serif text-2xl md:text-3xl text-aocDark">
+    <p className="font-serif text-2xl md:text-3xl text-aocDark">
       {children}
-    </h1>
+    </p>
   )
 }
 

@@ -12,9 +12,6 @@ module.exports = {
         "aocDark": "#171717",
         "aocGray": "#8A8A8A"
       },
-      fontSize: {
-        "5xl": "4.375rem"
-      },
       fontFamily: {
         sans: ['var(--font-roboto)', 'sans-serif'],
         serif: ['var(--font-raleway)', 'sans-serif'],
