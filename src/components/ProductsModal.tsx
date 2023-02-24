@@ -45,7 +45,7 @@ const ProductsModal = ({onClose}: Props) => {
               subheader="Business & Office"
               header="Stabil alapokra építve fejlődsz."
               text="Több, mint egyszerű dokumentumtárolás. A rendszer támogat és segít átlátni a céged pénzügyi és könyvelési folyamatait!"
-              href="https://aocsystem.com/#/products/sales-activity"
+              href="https://aocsystem.com/#/products/business-and-office"
               bgColor="bg-aocOrange"
               delay={0.3}
             />
