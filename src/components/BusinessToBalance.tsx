@@ -15,15 +15,14 @@ const BusinessToBalance = () => {
         </FadeInScaleWhenVisible>
         <FadeInWhenVisible delay={0.2}>
           <SerifBody>
-            Az AOC kategóriateremtő az üzleti szoftverek területén.<br/>
-            Egy új kategóriát hozott létre.
+            Egy új kategóriát hoztunk létre az üzleti szoftverek területén.
           </SerifBody>
         </FadeInWhenVisible>
       </div>
       <FadeInUpWhenVisible delay={0.3}>
         <p className="text-[2rem] md:text-5xl font-bold md:font-medium tracking-normal md:leading-[4rem] text-aocDark">
           A Business to Balance felfogás túlmutat a vállalkozások mindennapi igényeinek kielégítésén.<br/>
-          Segíti a vállalkozások zökkenőmentes fejlődését, a szervezet stabil struktúrájának kialakítását. 
+          Segíti a vállalkozások zökkenőmentes fejlődését és a szervezet stabil struktúrájának kialakítását. 
         </p>
       </FadeInUpWhenVisible>
     </section>
