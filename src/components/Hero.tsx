@@ -15,7 +15,7 @@ const Hero = () => {
   }, [gridItem])
 
   return (
-    <section className={`
+    <header className={`
       my-10 flex flex-col items-center justify-start gap-12 px-4 w-full max-w-6xl
       md:my-0 md:justify-center md:h-screen xl:px-0 min-h-[675px]
     `}>
@@ -44,7 +44,7 @@ const Hero = () => {
             <div className="h-[110vh] min-h-[800px] top-0 absolute w-56 bg-aocOrange opacity-20 z-[-1] invisible lg:visible"></div>
           </div>
         </div>
-    </section>
+    </header>
   )
 }
 

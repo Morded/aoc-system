@@ -1,0 +1,23 @@
+.triangle:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 110vh;
+  width: 51%;
+  @apply bg-aocLight bg-[url(/noise.png)];
+  transform: skew(0deg, 6deg);
+  box-shadow: rgba(0, 0, 0, 0.15) -3px -2px 4px;
+}
+.triangle:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 110vh;
+  width: 50%;
+  @apply bg-aocLight bg-[url(/noise.png)];
+  transform: skew(0deg, -6deg);
+  box-shadow: rgba(0, 0, 0, 0.15) 3px -2px 4px;
+}
+  

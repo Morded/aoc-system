@@ -20,7 +20,7 @@ const Layout = ({ children, title }: LayoutProps) => {
         <link rel="icon" href="https://aocsystem.com/favicon_aoc_dark_white.ico" />
       </Head>
       <Navbar />
-      <div id="main" className="w-full min-h-screen flex flex-col mx-auto items-center justify-center">
+      <div id="main" className="w-full min-h-screen flex flex-col mx-auto items-center">
         <ScrollToTop />
         {children}
       </div>
