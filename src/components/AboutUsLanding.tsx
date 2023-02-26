@@ -15,7 +15,7 @@ const TeamPhoto = () => (
       <Image alt="teamphoto" src="/teamphoto.webp" fill style={{
         objectFit: "contain"
       }}
-        className="object-center sm:object-top"
+        className="object-top"
       />
     </div>
   </div>
