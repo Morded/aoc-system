@@ -41,7 +41,7 @@ const OfficePhotos = () => {
   const [cols, setCols] = useState(0)
 
   return (
-    <section className="w-full max-w-6xl my-32 sm:my-0 min-h-screen flex flex-col justify-center sm:gap-16 px-4 xl:px-0">
+    <section className="w-full max-w-6xl my-32 flex flex-col justify-center sm:gap-16 px-4 xl:px-0">
       <div className="flex flex-col sm:flex-row justify-start gap-6">
         <BodyText>Néhány kép az irodáról</BodyText>
         <Image alt="line" src="/line.svg" height={2} width={64} />
