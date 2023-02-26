@@ -3,7 +3,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 110vh;
+  height: 55vh;
   width: 51%;
   @apply bg-aocLight bg-[url(/noise.png)];
   transform: skew(0deg, 6deg);
@@ -14,7 +14,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  height: 110vh;
+  height: 55vh;
   width: 50%;
   @apply bg-aocLight bg-[url(/noise.png)];
   transform: skew(0deg, -6deg);

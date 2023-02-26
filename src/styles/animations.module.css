@@ -3,6 +3,10 @@
   animation: rotate 20s infinite;
 }
 
+.scale {
+  animation: scale 0.5s;
+}
+
 .slideDown {
   animation: rotateX 3s;
   animation-fill-mode: forwards;
@@ -224,5 +228,17 @@
   }
   to {
     rotate: 359deg;
+  }
+}
+
+@keyframes scale {
+  from {
+    scale: 1;
+  }
+  50% {
+    scale: 0.9;
+  }
+  to {
+    scale: 1;
   }
 }
