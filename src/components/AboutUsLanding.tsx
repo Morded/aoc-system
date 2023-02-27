@@ -1,5 +1,5 @@
 import Header3 from "./Header3"
-import styles from "../styles/about.module.css"
+import styles from "../styles/containerskew.module.css"
 import Image from "next/image"
 import { FadeInScaleWhenVisible, FadeInWhenVisible } from "../utils/FramerAnimations"
 

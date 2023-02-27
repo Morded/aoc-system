@@ -12,7 +12,7 @@ const Features = () => {
     <section className="w-full flex flex-col items-center px-4 xl:px-0 my-10">
       <div ref={refContainer} className="w-full max-w-6xl grid grid-cols-12 justify-center gap-[15px]">
         <div className="col-span-12 lg:col-span-3 relative">
-          <BackgroundObject color='bg-aocOrange' />
+          <BackgroundObject color='bg-aocSky' />
           <div style={{
             opacity: opacityForBlock(progress, 0)
           }}>

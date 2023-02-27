@@ -4,7 +4,7 @@ type Props = {
 
 const BodyText = ({children}: Props) => {
   return (
-    <p className="font-serif font-medium text-3xl leading-[110%]">{children}</p>
+    <p className="font-serif font-medium text-2xl sm:text-3xl leading-[110%]">{children}</p>
   )
 }
 

@@ -3,6 +3,7 @@ import BodyText from "./BodyText";
 import Button from "./Button";
 import Header3 from "./Header3";
 import ProductPicker from "./ProductPicker";
+import s from '../styles/containerskew.module.css'
 
 type Props = {
   header: string 
@@ -13,7 +14,7 @@ type Props = {
 
 const CallToAction = ({header, subText, buttonText, href}: Props) => {
   return (
-    <section className="w-full px-4 lg:px-0 py-28 md:py-48 bg-aocOrange bg-[url(/noise.png)] flex justify-center mb-5">
+    <section className={`w-full px-4 lg:px-0 py-28 md:py-48 flex justify-center mb-20 relative ${s.diagonal ?? ""}`}>
       <div className="max-w-4xl flex flex-col justify-center items-center text-center gap-8">
         <FadeInScaleWhenVisible delay={0.1}>
           <Header3>{header}</Header3>

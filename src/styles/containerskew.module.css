@@ -21,3 +21,16 @@
   box-shadow: rgba(0, 0, 0, 0.15) 3px -2px 4px;
 }
   
+
+.diagonal:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+  width: 100%;
+  @apply bg-aocOrange bg-[url(/noise.png)];
+  transform: skew(0deg, -5deg);
+}
+   
