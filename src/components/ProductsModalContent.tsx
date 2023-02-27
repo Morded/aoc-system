@@ -2,8 +2,8 @@ import Link from "next/link"
 import BaseText from "./BaseText"
 import Button from "./Button"
 import Header2 from "./Header2"
-import SubHeader from "./SubHeader"
 import { FadeIn } from "../utils/FramerAnimations"
+import BodyText from "./BodyText"
 
 type ProductProps = { 
   subheader: string
@@ -34,7 +34,7 @@ const ProductContent = ({
       <div className={`flex flex-col gap-4 p-10 pt-10 md:pt-0 md:gap-6 md:max-w-lg mx-auto justify-between h-full ${bgColor} bg-[url(/noise.png)]`}> 
         <div className="flex flex-col">
           <FadeIn delay={delay ? delay + 0.2 : 0.2}>
-            <SubHeader>{subheader}</SubHeader>
+            <BodyText>{subheader}</BodyText>
           </FadeIn>
           <FadeIn delay={delay ? delay + 0.3 : 0.3}>
             <div className="mb-6 md:mb-10" >

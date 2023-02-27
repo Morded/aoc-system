@@ -1,10 +1,8 @@
 import { useRef } from "react"
 import useHighlightTextOnScroll, { opacityForBlock } from "../utils/useHighlightTextOnScroll"
+import BackgroundObject from "./BackgroundObject"
 import BodyText from "./BodyText"
 import Header3 from "./Header3"
-
-const BackgroundObject = ({color}: {color: string}) => 
-  <div className={`absolute w-16 h-48 bg-aocSky opacity-30 z-[-1] rotate-[135deg] left-[20%] sm:left-1/2 sm:-translate-x-1/2 ${color}`}></div>
 
 const WhyAreWe = () => {
   const refContainer = useRef<HTMLDivElement>(null)

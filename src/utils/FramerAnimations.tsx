@@ -1,7 +1,7 @@
 import {motion, useReducedMotion, Variants} from "framer-motion"
 
 const DURATION = 0.3
-const ONCE = false
+const ONCE = true
 
 type Props = {
   children: React.ReactNode

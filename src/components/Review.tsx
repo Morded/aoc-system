@@ -1,4 +1,5 @@
 import Link from "next/link"
+import BodyText from "./BodyText"
 
 type ReviewProps = {
   children: React.ReactNode
@@ -9,11 +10,11 @@ type ReviewProps = {
 const Review = ({ children, by, link }:ReviewProps ) => {
   return (
     <div className="flex flex-col justify-center text-center px-5 md:px-10 lg:px-20">
-      <div className="text-base md:text-2xl leading-10 lg:leading-[3rem] tracking-tight font-bold text-aocDark">
-        &ldquo;{children}&rdquo;
-      </div>
+      <BodyText>
+        <span className="font-bold">&ldquo;{children}&rdquo;</span>
+      </BodyText>
       <div className="mt-6 text-aocDark">
-        &mdash; <Link target="_blank" href={link} className="text-sm">{by}</Link>
+        &mdash; <Link target="_blank" href={link} className="text-base hover:text-aocViolet transition-all">{by}</Link>
       </div>
     </div>
   )

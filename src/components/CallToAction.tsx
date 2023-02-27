@@ -1,8 +1,8 @@
 import { FadeInScaleWhenVisible, FadeInUpWhenVisible, FadeInWhenVisible } from "../utils/FramerAnimations";
+import BodyText from "./BodyText";
 import Button from "./Button";
-import Header1 from "./Header1";
+import Header3 from "./Header3";
 import ProductPicker from "./ProductPicker";
-import SerifBody from "./SerifBody";
 
 type Props = {
   header: string 
@@ -13,14 +13,14 @@ type Props = {
 
 const CallToAction = ({header, subText, buttonText, href}: Props) => {
   return (
-    <section className="w-full px-4 lg:px-0 py-28 bg-aocOrange bg-[url(/noise.png)] flex justify-center mb-5">
-      <div className="max-w-7xl flex flex-col justify-center items-center text-center gap-8">
+    <section className="w-full px-4 lg:px-0 py-28 md:py-48 bg-aocOrange bg-[url(/noise.png)] flex justify-center mb-5">
+      <div className="max-w-4xl flex flex-col justify-center items-center text-center gap-8">
         <FadeInScaleWhenVisible delay={0.1}>
-          <Header1>{header}</Header1>
+          <Header3>{header}</Header3>
         </FadeInScaleWhenVisible>
         {subText &&
           <FadeInWhenVisible delay={0.2}>
-            <SerifBody>{subText}</SerifBody>
+            <BodyText>{subText}</BodyText>
           </FadeInWhenVisible>
         }
         <FadeInUpWhenVisible delay={0.3}>

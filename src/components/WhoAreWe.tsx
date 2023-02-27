@@ -1,10 +1,14 @@
 import BodyText from "./BodyText"
+import ColoredText from "./ColoredDot"
 import Header3 from "./Header3"
 
 const WhoAreWe = () => {
   return (
     <section className="flex flex-col gap-10 w-full text-aocDark z-30 max-w-6xl px-4 xl:px-0">
-      <Header3>Kik vagyunk?</Header3>
+      <Header3>
+        Kik vagyunk
+        <ColoredText color="text-aocPurple">?</ColoredText>
+      </Header3>
       <div className="grid grid-cols-12 gap-[15px]">
         <div className="col-span-none sm:col-span-2"></div>
         <div className="col-span-12 sm:col-span-10">

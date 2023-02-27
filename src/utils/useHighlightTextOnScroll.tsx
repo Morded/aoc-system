@@ -1,10 +1,12 @@
 import { RefObject, useContext, useEffect, useState } from "react"
 import { ScrollContext } from "../utils/ScrollObserver"
 
+const DEFAULT_OPACITY = 0.05
+
 export const opacityForBlock = (sectionProgress: number, blockNo: number) => {
   const progress = sectionProgress - blockNo
   if (progress >= 0 && progress < 1) return 1
-  return 0.2
+  return DEFAULT_OPACITY
 }
 
 type Props = {
@@ -14,7 +16,7 @@ type Props = {
 
 const useHighlightTextOnScroll = ({container, numOfPages}: Props) => {
   const {scrollY} = useContext(ScrollContext)
-  const [progress, setProgress] = useState(0.2)
+  const [progress, setProgress] = useState(DEFAULT_OPACITY)
 
   useEffect(() => {
     const { current: elContainer } = container

@@ -1,11 +1,9 @@
-type ColoredDotProps = {
+type Props = {
+  children: React.ReactNode
   color: string
 }
 
-const ColoredDot = ({ color }: ColoredDotProps) => {
-  return (
-    <span className={`${color} opacity-30`}>.</span>
-  )
-}
+const ColoredText = ({ children, color }: Props) =>
+  <span className={`${color} opacity-30`}>{children}</span>
 
-export default ColoredDot;
+export default ColoredText;

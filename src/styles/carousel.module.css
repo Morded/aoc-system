@@ -14,7 +14,7 @@
 .slide {
   flex: 0 0 auto;
   max-width: min(90%, 820px);
-  opacity: 0.4;
+  opacity: 0.2;
   transition: opacity 0.4s;
 }
 

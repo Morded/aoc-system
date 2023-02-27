@@ -25,7 +25,7 @@ const Button = ({ href, text, bgColor, textColor, wFull, big, onClick }: ButtonP
           ` 
           : 'w-fit rounded-full py-2 justify-center text-base'
         }
-        ${big ? 'md:text-3xl md:px-16 md:h-16' : ''}
+        ${big ? 'md:text-2xl md:px-12 md:h-12' : ''}
       `
 
   if (href) 

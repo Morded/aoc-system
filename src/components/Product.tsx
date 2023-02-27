@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRef } from "react";
+import BodyText from "./BodyText";
 import Button from "./Button";
 
 type ProductContainerProps = {
@@ -79,10 +80,8 @@ const Product = ({progress, page, header, text, href, bgColor, textColor, image 
   return (
     <ProductContainer> 
       <ProductLeft progress={progress} page={page}> 
-        <div className="flex flex-col gap-2 md:gap-3 max-w-lg mx-auto"> 
-          <span className="text-aocGray">
-            {header} 
-          </span>
+        <div className="flex flex-col gap-2 md:gap-3 max-w-lg mx-auto md:px-10"> 
+          <BodyText>{header}</BodyText>
           <div className="text-3xl md:text-5xl font-bold tracking-[0.03em] mb-6 md:mb-10">
             {text}
           </div>

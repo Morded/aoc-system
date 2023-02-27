@@ -1,7 +1,7 @@
 import { type NextPage } from "next";
 import BusinessToBalance from "../components/BusinessToBalance";
+import Features from "../components/Features";
 import Hero from "../components/Hero";
-import HorizontalSection from "../components/HorizontalSection";
 import Layout from "../components/layout";
 import Products from "../components/Products";
 import ProductsHeader from "../components/ProductsHeader";
@@ -15,9 +15,7 @@ const Home: NextPage = () => {
       <Hero />
       <BusinessToBalance />
       <TrustedBy />
-      <div className="overflow-x-hidden w-full min-h-screen flex flex-col mx-auto items-center justify-center">
-        <HorizontalSection />
-      </div>
+      <Features />
       <ProductsHeader />
       <Products />
       <Testimonials />
