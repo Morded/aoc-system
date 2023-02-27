@@ -10,7 +10,7 @@ const TeamPhoto = () => (
   <div className="min-h-[50vh] sm:min-h-screen w-full max-w-6xl flex justify-center left-1/2 -translate-x-1/2 absolute -bottom-[20%] sm:-bottom-[60%]">
     <div className="relative w-full">
       <FadeInWhenVisible delay={0.5}>
-        <div className="ml-4 px-1 lg:px-0 xl:ml-0 font-serif font-medium text-2xl absolute top-1/4 sm:top-1/3 z-10 text-aocLight lg:text-aocDark bg-aocDark lg:bg-transparent">A csapat</div>
+        <div className="ml-4 px-1 lg:px-0 xl:ml-0 font-serif font-medium text-2xl absolute top-1/4 sm:top-1/3 z-50 text-aocLight lg:text-aocDark bg-aocDark lg:bg-transparent">A csapat</div>
       </FadeInWhenVisible>
       <Image alt="teamphoto" src="/teamphoto.webp" fill style={{
         objectFit: "contain"

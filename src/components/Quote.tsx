@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 const Portrait = () => 
-  <div className="absolute w-full sm:w-[70%] h-[325px] sm:h-[625px] left-0 top-0">
+  <div className="absolute w-full sm:w-[70%] h-[325px] sm:h-[625px] left-0 top-0 z-[-1]">
     <Image alt="portrait" src="/zsolt.webp" fill className="object-contain"/>
   </div>
 
