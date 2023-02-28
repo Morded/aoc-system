@@ -8,9 +8,10 @@ type ButtonProps = {
   wFull?: boolean;
   big?: boolean;
   onClick?: () => void
+  blank?: boolean
 }
 
-const Button = ({ href, text, bgColor, textColor, wFull, big, onClick }: ButtonProps) => {
+const Button = ({ href, text, bgColor, textColor, wFull, big, onClick, blank }: ButtonProps) => {
   const classN = `
         bg-aocDark tracking-wide px-8 bg-[url(/noise.png)]
         font-bold font-sans flex items-center h-10
@@ -30,7 +31,7 @@ const Button = ({ href, text, bgColor, textColor, wFull, big, onClick }: ButtonP
 
   if (href) 
     return (
-      <Link href={href} className={classN}>
+      <Link href={href} className={classN} target={blank ? "_blank" : ""}>
         {text}
       </Link>
     )

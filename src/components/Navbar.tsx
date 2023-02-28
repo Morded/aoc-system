@@ -38,7 +38,7 @@ const Navbar = () => {
               }
             </ul>
           </nav>
-          <Button href="#" text="Bejelentkezés" wFull={true} />
+          <Button href="https://my.aocsystem.com/login" text="Bejelentkezés" wFull={true} blank={true} />
         </div>
       </div>
     </div>
