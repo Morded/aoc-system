@@ -1,7 +1,7 @@
 import Header3 from "./Header3"
 import styles from "../styles/containerskew.module.css"
 import Image from "next/image"
-import { FadeInScaleWhenVisible, FadeInWhenVisible } from "../utils/FramerAnimations"
+import { FadeInScaleWhenVisible, FadeInUpWhenVisible, FadeInWhenVisible } from "../utils/FramerAnimations"
 
 const BottomTriangle = () => 
   <div className={`w-full h-[10vh] relative -translate-y-[10vh] ${styles.triangle ?? ""}`}></div>
@@ -9,14 +9,18 @@ const BottomTriangle = () =>
 const TeamPhoto = () => (
   <div className="min-h-[50vh] sm:min-h-screen w-full max-w-6xl flex justify-center left-1/2 -translate-x-1/2 absolute -bottom-[20%] sm:-bottom-[60%]">
     <div className="relative w-full">
-      <FadeInWhenVisible delay={0.5}>
+      <FadeInWhenVisible delay={0.7}>
         <div className="ml-4 px-1 lg:px-0 xl:ml-0 font-serif font-medium text-2xl absolute top-1/4 sm:top-1/3 z-50 text-aocLight lg:text-aocDark bg-aocDark lg:bg-transparent">A csapat</div>
       </FadeInWhenVisible>
-      <Image alt="teamphoto" src="/teamphoto.webp" fill style={{
-        objectFit: "contain"
-      }}
-        className="object-top"
-      />
+      <FadeInUpWhenVisible delay={0.4}>
+        <div className="relative w-full min-h-[50vh] sm:min-h-screen">
+          <Image alt="teamphoto" src="/teamphoto.webp" fill style={{
+            objectFit: "contain"
+          }}
+            className="object-top"
+          />
+        </div>
+      </FadeInUpWhenVisible>
     </div>
   </div>
 )

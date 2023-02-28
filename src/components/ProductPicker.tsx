@@ -35,10 +35,10 @@ const ProductPicker = ({ type, buttonText, big}: Props) => {
         onClick={handleClick}
         big={big}
       />
-      {isOpen && createPortal(
-        <ProductsModal onClose={handleClick} />,
-        document.body
-      )}
+        {isOpen && createPortal(
+          <ProductsModal onClose={handleClick} />,
+          document.body
+        )}
     </div>
   )
 }

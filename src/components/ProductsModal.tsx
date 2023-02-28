@@ -14,44 +14,45 @@ const ProductsModal = ({onClose}: Props) => {
   const reducedMotion = useReducedMotion()
 
   return (
-      <motion.div 
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.2 }}
-        variants={reducedMotion ? {} : opacityVariants}
-        className={`${roboto.variable} ${raleway.variable} w-full h-screen flex justify-center items-center z-50 fixed top-0 left-0 font-sans`}
-      >
-        <TransparentBackground onClose={onClose} />
-        <div className="shadow-xl rounded z-50 h-screen w-full md:h-auto md:w-auto overflow-y-auto">
-          <CloseButtonWrapper>
-            <Image 
-              alt="close button"
-              src="/exit.svg" 
-              width={42}
-              height={42}
-              className="transition-all cursor-pointer float-right mr-2 mt-2 p-3"
-              onClick={onClose}
-            />
-          </CloseButtonWrapper>
-          <ProductContentWrapper>
-            <ProductContent
-              subheader="Sales Activity"
-              header="Az új értékesítési platform."
-              text="Egyetlen cél vezérelt minket. Egy olyan eszközt adni a pénzügyi értékesítők, közvetítők és tanácsadók kezébe, mely egyszerű, gyors, hatékony és teljesítményt növel!"
-              href="https://aocsystem.com/#/products/sales-activity"
-              bgColor="bg-aocSky"
-            />
-            <ProductContent
-              subheader="Business & Office"
-              header="Stabil alapokra építve fejlődsz."
-              text="Több, mint egyszerű dokumentumtárolás. A rendszer támogat és segít átlátni a céged pénzügyi és könyvelési folyamatait!"
-              href="https://aocsystem.com/#/products/business-and-office"
-              bgColor="bg-aocOrange"
-              delay={0.3}
-            />
-          </ProductContentWrapper>
-        </div>
-      </motion.div>
+    <motion.div 
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      transition={{ duration: 0.2 }}
+      variants={reducedMotion ? {} : opacityVariants}
+      className={`${roboto.variable} ${raleway.variable} w-full h-screen flex justify-center items-center z-50 fixed top-0 left-0 font-sans`}
+    >
+      <TransparentBackground onClose={onClose} />
+      <div className="shadow-xl rounded z-50 h-screen w-full md:h-auto md:w-auto overflow-y-auto">
+        <CloseButtonWrapper>
+          <Image 
+            alt="close button"
+            src="/exit.svg" 
+            width={42}
+            height={42}
+            className="transition-all cursor-pointer float-right mr-2 mt-2 p-3"
+            onClick={onClose}
+          />
+        </CloseButtonWrapper>
+        <ProductContentWrapper>
+          <ProductContent
+            subheader="Sales Activity"
+            header="Az új értékesítési platform."
+            text="Egyetlen cél vezérelt minket. Egy olyan eszközt adni a pénzügyi értékesítők, közvetítők és tanácsadók kezébe, mely egyszerű, gyors, hatékony és teljesítményt növel!"
+            href="https://aocsystem.com/#/products/sales-activity"
+            bgColor="bg-aocSky"
+          />
+          <ProductContent
+            subheader="Business & Office"
+            header="Stabil alapokra építve fejlődsz."
+            text="Több, mint egyszerű dokumentumtárolás. A rendszer támogat és segít átlátni a céged pénzügyi és könyvelési folyamatait!"
+            href="https://aocsystem.com/#/products/business-and-office"
+            bgColor="bg-aocOrange"
+            delay={0.3}
+          />
+        </ProductContentWrapper>
+      </div>
+    </motion.div>
   );
 }
 
