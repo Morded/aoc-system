@@ -4,13 +4,14 @@
 }
 
 .fade {
-  animation: fade 1s;
+  animation: fade 2s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes fade {
   0% {
-    opacity: 0;
+    opacity: 0.1;
   }
   25% {
     opacity: 1;
@@ -19,8 +20,7 @@
     opacity: 1;
   }
   100% {
-    opacity: 0;
-    animation-timing-function: ease-out;
+    opacity: 0.1;
   }
 }
 

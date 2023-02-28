@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useRef } from "react";
 import BodyText from "./BodyText";
 import Button from "./Button";
-import s from "../styles/containerskew.module.css"
 
 type ProductContainerProps = {
   children: React.ReactNode
