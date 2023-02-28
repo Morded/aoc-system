@@ -12,7 +12,7 @@ const Quote = () => {
       <div className="sm:w-full">
       </div>
       <FadeInWhenVisible delay={0.3}>
-        <div className="font-serif font-medium text-4xl md:text-[3.25rem] leading-none w-full text-center sm:text-left">
+        <div className="font-serif font-medium text-4xl md:text-[3.25rem] leading-none w-full text-center sm:text-left text-aocDark">
           &quot;Az alkotás öröme küldetéstudatot teremt.&quot;
         </div>
       </FadeInWhenVisible>

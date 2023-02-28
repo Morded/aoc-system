@@ -40,7 +40,7 @@ const ScrollToTop = () => {
       }}
       onClick={handleClick}
     >
-      <span className="hidden md:block">tetejére</span>
+      <span className="hidden md:block text-aocDark">tetejére</span>
       <Image 
         alt="arrow" 
         src="/arrow.svg" 
